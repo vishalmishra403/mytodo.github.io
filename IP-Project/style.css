@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cinzel', serif;
+    font-family: 'Lobster Two', cursive;
+    font-family: 'Sacramento', cursive;
+    font-family: 'Tapestry', cursive;
+}
+*::selection{
+    background-color: black;
+    color: white;
+}
+
+
+/* Home Page background */
+.homepage{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('laptop-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Navbar (To-do list) */
+
+ ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(131, 131, 131, 0.392);
+    box-shadow: 0 1px 8px black;
+}
+ ul li{
+    float: left;
+}
+ ul li a{
+    display: block;
+    color: white;
+    padding: 18px 16px;
+    text-decoration: none;
+}
+ ul li a:hover:not(.active){
+    background-color: rgb(31, 31, 31);
+    color: white;
+    transition: 0.8s;
+}
+ a.active{
+    background-color: tomato;
+    color: white;
+}
+a.active:hover{
+    color: white;
+}
+
+
+
+/* Logo */
+#logo{
+    float: right;
+    color: white;
+    padding: 0.7rem 2rem 0 0;
+    text-shadow: 1px 1px 5px black;
+}
+
+/* main heading on the center */
+.main_heading{
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/* Buttons */
+#btn{
+    padding: 0.8rem;
+    margin: 0;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+#btn1,#btn2{
+    box-shadow: 2px 1px 5px white;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    margin-left: 0.6rem;
+}
+#btn1:hover{
+    box-shadow: 2px 1px 5px tomato;
+    color: tomato;
+}
+#btn2:hover{
+    box-shadow: 2px 1px 5px tomato;
+    color: tomato;
+}
+
+/* Modal */
+div #bg_login_modal, #bg_register_modal{
+    width: 100%;
+    height: 100%;
+    background:url('modal-background5.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#bg_login_modal{
+    box-shadow: 5px 5px 3px black;
+}
+
+/* Media Query */
+  @media screen and (max-width: 680px) {
+    .heading {width: 100vw;}
+    #btn1,#btn2 {width: 50vw;}
+    #logo{width: 100vw; text-align: center;}
+    nav{
+        width: 100%; text-align: center; background-color: black;
+    }
+    .main_heading{
+        width: 100%;
+        display: block;
+        padding: 0.8rem;
+    }
+  }
+
+
+
+  /* INSERT INTO `Login` (`username`, `password`) VALUES ('testName', 'Hello123'); */
